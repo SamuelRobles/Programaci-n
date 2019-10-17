@@ -30,6 +30,7 @@ public class IE1118 {
 			desdeCentro=centro+1;
 			do {
 				suma2+=desdeCentro;
+				//Acelerador
 				if (suma2>suma) {
 					desdeCentro=n;
 				}

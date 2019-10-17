@@ -7,6 +7,7 @@ public class IE1118 {
 	public static void main(String[] args) {
 		//Definir variables
 		//Modificación en rama1, n = number
+		//modificación de rama1
 		int number,centro,hastaCentro,suma,suma2,desdeCentro;
 		
 		//Valor variables

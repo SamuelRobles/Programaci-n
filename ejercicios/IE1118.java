@@ -6,13 +6,19 @@ public class IE1118 {
 
 	public static void main(String[] args) {
 		//Definir variables
+<<<<<<< HEAD
 		//Modificación en la rama principal
 		int n,centro,hastaCentro,suma,suma2,desdeCentro;
+=======
+		//Modificación en rama1, n = number
+		//modificación de rama1
+		int number,centro,hastaCentro,suma,suma2,desdeCentro;
+>>>>>>> rama1
 		
 		//Valor variables
 		System.out.println("Introduzca maximo para encontrar numeros centro");
 		Scanner numero1 = new Scanner(System.in);
-		n = numero1.nextInt();
+		number = numero1.nextInt();
 		centro=1;
 		hastaCentro=0;
 		suma=0;
@@ -33,20 +39,20 @@ public class IE1118 {
 				suma2+=desdeCentro;
 				//Comprobador para aligerar
 				if (suma2>suma) {
-					desdeCentro=n;
+					desdeCentro=number;
 				}
 				desdeCentro++;
 				if (suma==suma2) {
 					System.out.println(centro);
 				}
 			}
-			while (desdeCentro<n);
+			while (desdeCentro<number);
 			suma=0;
 			suma2=0;
 			hastaCentro=0;
 			centro++;
 		}
-		while (centro<=n);
+		while (centro<=number);
 	}
 
 }

@@ -19,18 +19,18 @@ public class IE1118 {
 		
 		//Calculo
 		do {
-			//Suma de los numeros por la izquierda
+			//Suma de los numeros por la izquierda del centro
 			do {
 				suma+=hastaCentro;
 				hastaCentro++;
 			}
 			while (hastaCentro<centro);
 			
-			//Suma de los numeros por la derecha
+			//Suma de los numeros por la derecha del centro
 			desdeCentro=centro+1;
 			do {
 				suma2+=desdeCentro;
-				//Acelerador
+				//Comprobador para aligerar
 				if (suma2>suma) {
 					desdeCentro=n;
 				}

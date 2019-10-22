@@ -55,7 +55,7 @@ public class Satelite {
 				" merididano "+meridiano+" y a la distancia de la tierra de "
 				+distancia_tierra);
 	}
-	
+	//Main
 	public static void main(String[] args) {
 		Satelite s1, s2;
 		s1=new Satelite();

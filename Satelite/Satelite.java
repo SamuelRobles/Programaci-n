@@ -26,9 +26,42 @@ public class Satelite {
 		distancia_tierra=d;
 	}
 	
-	public void print(double m, double p, double d) {
+	public double getMeridiano() {
+		return meridiano;
+	}
+
+	public void setMeridiano(double meridiano) {
+		this.meridiano = meridiano;
+	}
+
+	public double getParalelo() {
+		return paralelo;
+	}
+
+	public void setParalelo(double paralelo) {
+		this.paralelo = paralelo;
+	}
+
+	public double getDistancia_tierra() {
+		return distancia_tierra;
+	}
+
+	public void setDistancia_tierra(double distancia_tierra) {
+		this.distancia_tierra = distancia_tierra;
+	}
+
+	public void printPosicion() {
 		System.out.println("El parelelo se encuentra en el paralero "+paralelo+
 				" merididano "+meridiano+" y a la distancia de la tierra de "
 				+distancia_tierra);
+	}
+	
+	public static void main(String[] args) {
+		Satelite s1, s2;
+		s1=new Satelite();
+		s2=new Satelite(4, 2, 9);
+		s1.setPosicion(5, 7, 3);
+		s1.printPosicion();
+		s2.printPosicion();
 	}
 }

@@ -214,7 +214,7 @@ public class MetodoDeEnlace {
 		x2=sc.nextDouble();
 		y2=sc.nextDouble();
 		
-		line= new Linea(x1,y1,x2,y2);
+		
 		
 		do {
 			System.out.println("¿Quieres hacer algo con la linea?");
@@ -229,27 +229,34 @@ public class MetodoDeEnlace {
 			case 1:
 				System.out.println("Cuanto vas a querer mover a la derecha");
 				c=sc.nextInt();
-				line.moverDerecha(c);
+				x1+=c;
+				x2+=c;
 				break;
 			case 2:
 				System.out.println("Cuanto vas a querer mover a la izquierda");
 				c=sc.nextInt();
-				line.moverIzquierda(c);
+				x1-=c;
+				x2-=c;
 				break;
 			case 3:
 				System.out.println("Cuanto vas a querer mover a la arriba");
 				c=sc.nextInt();
-				line.moverArriba(c);
+				y1+=c;
+				y2+=c;
 				break;
 			case 4:
 				System.out.println("Cuanto vas a querer mover a la abajo");
 				c=sc.nextInt();
-				line.moverAbajo(c);
+				y1-=c;
+				y2-=c;
 				break;
 			}
 		} while (5>elec && elec>0);
 		
-		line.posicion();
+		line= new Linea(x1,y1,x2,y2);
+		
+		System.out.println("[("+line.getPuntoA().getX()+","+line.getPuntoA().getY()+")"
+				+ ",("+line.getPuntoB().getX()+","+line.getPuntoB().getY()+")]");
 	}*/
 }
 		

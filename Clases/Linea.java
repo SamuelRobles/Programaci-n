@@ -3,45 +3,30 @@ package Clases;
 import java.util.Scanner;
 
 public class Linea {
-	private double puntoAx,puntoAy;
-	private double puntoBx,puntoBy;
+	private puntoA puntoA;
+	private puntoB puntoB;
 	
-	Linea () {
-		puntoAx=0.0;
-		puntoBx=0.0;
-		puntoAy=0.0;
-		puntoBy=0.0;
+	
+	
+	Linea (double x1,double y1,double x2,double y2) {
+		this.puntoA=new puntoA(x1,y1);
+		this.puntoB=new puntoB(x2,y2);
 	}
-	
-	Linea (double x1,double x2,double y1,double y2){
-		puntoAx=x1;
-		puntoBx=x2;
-		puntoAy=y1;
-		puntoBy=y2;
+
+	public String getPuntoA() {
+		return (this.puntoA.getX()+","+this.puntoA.getY());
 	}
-	
-	public void moverDerecha(int c) {
-		puntoAy=puntoAy+c;
-		puntoBy=puntoBy+c;
+
+	public void setPuntoA(puntoA puntoA) {
+		this.puntoA = puntoA;
 	}
-	
-	public void moverIzquierda(int c) {
-		puntoAy=puntoAy-c;
-		puntoBy=puntoBy-c;
+
+	public String getPuntoB() {
+		return (this.puntoB.getX()+","+this.puntoB.getY());
 	}
-	
-	public void moverArriba(int c) {
-		puntoAx=puntoAx+c;
-		puntoBx=puntoBx+c;
-	}
-	
-	public void moverAbajo(int c) {
-		puntoAx=puntoAx-c;
-		puntoBx=puntoBx-c;
-	}
-	
-	public void posicion() {
-		System.out.println("[("+puntoAx+","+puntoAy+"),("+puntoBx+","+puntoBy+")]");
+
+	public void setPuntoB(puntoB puntoB) {
+		this.puntoB = puntoB;
 	}
 	
 public static void main(String[] args) {		
@@ -60,7 +45,7 @@ public static void main(String[] args) {
 		x2=sc.nextDouble();
 		y2=sc.nextDouble();
 		
-		line= new Linea(x1,y1,x2,y2);
+		
 		
 		do {
 			System.out.println("¿Quieres hacer algo con la linea?");
@@ -75,26 +60,33 @@ public static void main(String[] args) {
 			case 1:
 				System.out.println("Cuanto vas a querer mover a la derecha");
 				c=sc.nextInt();
-				line.moverDerecha(c);
+				x1+=c;
+				x2+=c;
 				break;
 			case 2:
 				System.out.println("Cuanto vas a querer mover a la izquierda");
 				c=sc.nextInt();
-				line.moverIzquierda(c);
+				x1-=c;
+				x2-=c;
 				break;
 			case 3:
 				System.out.println("Cuanto vas a querer mover a la arriba");
 				c=sc.nextInt();
-				line.moverArriba(c);
+				y1+=c;
+				y2+=c;
 				break;
 			case 4:
 				System.out.println("Cuanto vas a querer mover a la abajo");
 				c=sc.nextInt();
-				line.moverAbajo(c);
+				y1-=c;
+				y2-=c;
 				break;
 			}
 		} while (5>elec && elec>0);
 		
-		line.posicion();
+		line= new Linea(x1,y1,x2,y2);
+		
+		System.out.println("[("+line.getPuntoA()+"),("+line.getPuntoB()+")]");
 	}
+	
 }

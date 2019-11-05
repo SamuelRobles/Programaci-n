@@ -30,8 +30,4 @@ public class puntoA {
 		return y;
 	}
 	
-	public void printpunto() {
-		System.out.println("("+x+","+y+")");
-	}
-	
 }
